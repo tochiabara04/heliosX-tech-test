@@ -1,12 +1,5 @@
 # HeliosX Tech Test
 
-## Features
-- Displays one question at a time for a clear and focused user experience.
-- Collects user answers and logs them in the console.
-- Displays a thank-you message upon completion.
-- Responsive design, optimized for both desktop and mobile screen resolutions.
-- Includes a header with the company logo aligned to the top-right and a footer with two columns (on desktop).
-
 ## Setup Instructions
 ### Prerequisites
 - Node.js (v16 or later recommended)
