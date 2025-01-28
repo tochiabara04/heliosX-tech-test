@@ -1,50 +1,53 @@
-# React + TypeScript + Vite
+# HeliosX Tech Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- Displays one question at a time for a clear and focused user experience.
+- Collects user answers and logs them in the console.
+- Displays a thank-you message upon completion.
+- Responsive design, optimized for both desktop and mobile screen resolutions.
+- Includes a header with the company logo aligned to the top-right and a footer with two columns (on desktop).
 
-Currently, two official plugins are available:
+## Setup Instructions
+### Prerequisites
+- Node.js (v16 or later recommended)
+- Yarn package manager
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Steps to Run Locally
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/tochiabara04/heliosX-tech-test.git
+   cd heliosX-tech-test
+   ```
 
-## Expanding the ESLint configuration
+2. **Install dependencies:**
+   ```bash
+   yarn install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. **Start the development server:**
+   ```bash
+   yarn start
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+4. Open the application in your browser at [http://localhost:3000](http://localhost:3000).
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Technologies Used
+- **React**: For building the user interface.
+- **TypeScript**: For type-safe code.
+- **SASS**: For modular and maintainable styling.
+
+
+## Known Trade-offs
+- **API Integration**: The submission only simulates API interaction by logging the collected data to the console. Actual API integration would be straightforward to add in the future.
+- **Validation**: Assumes valid user inputs since the exercise does not require extensive validation.
+
+## Example Console Output
+Upon completing the consultation, the following format is logged:
+```
+Question: Do you have a nut allergy?, Answer: Yes
+Question: Have you consulted a doctor before?, Answer: No
+...
+Final Collected Data: {0: true, 1: false, 2: true, 3: false, 4: true}
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
