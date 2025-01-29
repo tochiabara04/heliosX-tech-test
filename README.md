@@ -19,7 +19,7 @@
 
 3. **Start the development server:**
    ```bash
-   yarn start
+   yarn dev
    ```
 
 4. Open the application in your browser at [http://localhost:3000](http://localhost:3000).
